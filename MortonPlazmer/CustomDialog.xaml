@@ -1,0 +1,22 @@
+﻿<Window x:Class="MortonPlazmer.CustomDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CustomDialog"
+        Width="400"
+        Height="200"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="False"
+        Background="Black">
+
+    <Border CornerRadius="8" Background="Black" Padding="20" BorderBrush="Gray" BorderThickness="1">
+        <Grid  Background="White">
+            <TextBlock Text="{Binding Message}" TextWrapping="Wrap" FontSize="16" Margin="0,0,0,40"/>
+            <StackPanel Background="Black" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Да" Width="80"  FontStyle="Normal" FontWeight="Bold" Background="Blue" Margin="0,0,10,0" Click="Yes_Click"/>
+                <Button Content="Нет" Width="80" Background="Red" Click="No_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
